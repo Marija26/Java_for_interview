@@ -22,7 +22,7 @@ public class Test7 {
     static void a(int[] a) {
         List<Integer> list = new ArrayList<>();
         List<Integer> list1 = new ArrayList<>();
-        List<Integer>  list3 = new ArrayList<>();
+        List<Integer> list3 = new ArrayList<>();
         int b = 0;
         for (int i : a) {
             if (!list1.contains(i)) {
