@@ -13,58 +13,19 @@ multiplyTwoStrings(s1, s2) = "169".*/
 public class Test6 {
     public static void main(String[] args) {
         String s1 = "15";
-        String s2 = "3";
-        System.out.println(multiplyTwoStrings(s1, s2));
+        String s2 = "35";
+        multiplyTwoStrings(s1, s2);
     }
 
-    static String multiplyTwoStrings(String s1, String s2) {
-        long a = Long.parseLong(s1);
-        long b = Long.parseLong(s2);
+       static String multiplyTwoStrings(String s1, String s2) {
 
-        BigInteger result = BigInteger.valueOf(a).multiply(BigInteger.valueOf(b));
-        String s = "" + result;
-        return s;
-    }
+            BigDecimal bd1 = new BigDecimal(s1);
+            BigDecimal bd2 = new BigDecimal(s2);
+            BigDecimal res = bd1.multiply(bd2);
+            String result = "" + res;
+            return result;
 
-
+        }
 }
-class Parent {
-    public Parent(String s){
-        print("created");
-    }
-    public static void print(String s){
-        System.out.println("Parent: " + s);
-    }
-}
-
-class Child extends Parent {
-    public Child() {
-        super("H");
-    }
-
-    public static void print(String s){
-        System.out.println("Child: " + s);
-    }
-    public static void main(String[] args){
-        Child child = new Child();
-        print("created");
-    }
-}
-//    public static void main(String[] args) {
-//        String s1 = "15";
-//        String s2 = "3";
-//        multiplyTwoStrings(s1, s2);
-//    }
-//
-//    static String multiplyTwoStrings(String s1, String s2) {
-//        Integer a = Integer.valueOf(s1) * Integer.valueOf(s2);
-//        System.out.println(a);
-//        String q = Integer.toString(a);
-//        return q;
-//
-//
-//    }
-//}
-
 
 
