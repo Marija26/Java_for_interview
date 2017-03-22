@@ -18,8 +18,9 @@ public class RacingClock  extends Thread {
            if (MyThread.countSeconds < 4 && MyThread.countSeconds > 0) {
                System.out.print(MyThread.countSeconds-- + " ");
            }
-          else if  (MyThread.countSeconds < 5 && MyThread.countSeconds > 0) {
-                System.out.print(MyThread.countSeconds-- + " ");}
+           if  (MyThread.countSeconds < 5 && MyThread.countSeconds > 0) {
+                System.out.print(MyThread.countSeconds-- + " ");
+              }
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

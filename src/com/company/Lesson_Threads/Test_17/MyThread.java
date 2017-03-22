@@ -14,7 +14,7 @@ package com.company.Lesson_Threads.Test_17;
 Пример для countSeconds=3 : [3 2 1 Марш!]
 */
 public class MyThread {
-    static int countSeconds =3;
+    static int countSeconds =4;
     public static void main(String[] args) throws InterruptedException {
         RacingClock racingClock = new RacingClock();
         racingClock.start();
