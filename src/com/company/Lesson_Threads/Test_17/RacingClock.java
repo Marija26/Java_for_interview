@@ -15,23 +15,22 @@ public class RacingClock  extends Thread {
     public void run() {
         while (!isCancel) {
 
-            if (MyThread.countSeconds ==3&&MyThread.countSeconds > 0) {
-                System.out.print(MyThread.countSeconds-- + " ");
-            }
-            else if (MyThread.countSeconds ==4&&MyThread.countSeconds>=0){
-                System.out.print(MyThread.countSeconds-- + " ");
-            }
+           if (MyThread.countSeconds < 4 && MyThread.countSeconds > 0) {
+               System.out.print(MyThread.countSeconds-- + " ");
+           }
+          else if  (MyThread.countSeconds < 5 && MyThread.countSeconds > 0) {
+                System.out.print(MyThread.countSeconds-- + " ");}
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
-
+            System.out.println("Marsh!");
 
         }
-        System.out.println("Прервано!");
     }
-}
+
 
