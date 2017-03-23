@@ -4,34 +4,19 @@ package com.company.Lesson_Threads.Test_17;
 /**
  * Created by Маша on 21.03.2017.
  */
-public class RacingClock  extends Thread {
-    private boolean isCancel = false;
-
-    public void cancel() {
-        this.isCancel = true;
-    }
-
+public class RacingClock extends Thread {
     @Override
     public void run() {
-        while (!isCancel) {
-
-           if (MyThread.countSeconds < 4 && MyThread.countSeconds > 0) {
-               System.out.print(MyThread.countSeconds-- + " ");
-           }
-           if  (MyThread.countSeconds < 5 && MyThread.countSeconds > 0) {
+        try {
+            while (MyThread.countSeconds > 0) {
                 System.out.print(MyThread.countSeconds-- + " ");
-              }
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-
+                Thread.sleep(1000);
             }
             System.out.println("Marsh!");
-
+        } catch (InterruptedException e) {
+            System.out.println("Prervano!");
         }
     }
+}
 
 

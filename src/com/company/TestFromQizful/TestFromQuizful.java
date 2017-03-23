@@ -6,37 +6,22 @@ package com.company.TestFromQizful;
 public class TestFromQuizful {
 
 
-        public static class Parent{
 
-            public void test(){
-                System.out.println("parent::test");
-            }
+        private int value = 1;
+
+        public int getValue() {
+            return value;
         }
 
-        public static class Child extends Parent{
-
-            public void test(){
-                System.out.println("child::test");
-            }
+        public void changeVal(int value) {
+            this.value = value;
         }
 
-        public static class Tester{
-
-            public void test(Parent obj){
-                System.out.println("Testing parent...");
-                obj.test();
-            }
-
-            public void test(Child obj){
-                System.out.println("Testing child...");
-                obj.test();
-            }
-        }
-
-        public static void main(String[] args){
-            Child obj = new Child();
-            Tester t = new Tester();
-            t.test(obj);
+        public static void main(String args[]) {
+            int a = 2;
+            TestFromQuizful c = new TestFromQuizful();
+            c.changeVal(a);
+            System.out.print(c.getValue());
         }
     }
 

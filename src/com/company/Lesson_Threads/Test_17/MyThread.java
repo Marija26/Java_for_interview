@@ -14,12 +14,13 @@ package com.company.Lesson_Threads.Test_17;
 Пример для countSeconds=3 : [3 2 1 Марш!]
 */
 public class MyThread {
-    static int countSeconds =4;
+    static int countSeconds = 3;
+
     public static void main(String[] args) throws InterruptedException {
         RacingClock racingClock = new RacingClock();
         racingClock.start();
-        Thread.sleep(4000);
-        racingClock.cancel();
+        Thread.sleep(3500);
+        racingClock.interrupt();
 
 
     }
