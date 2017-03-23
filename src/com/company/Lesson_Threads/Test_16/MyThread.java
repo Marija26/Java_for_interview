@@ -18,16 +18,17 @@ import java.util.Date;
 
 public class MyThread {
     public static void main(String[] args) throws IOException, InterruptedException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        InputStreamReader in = new InputStreamReader(System.in);
+        BufferedReader reader = new BufferedReader(in);
 
         StopWatch stopWatch = new StopWatch();
-        Date date =new Date();
         stopWatch.start();
+        reader.readLine();
         stopWatch.interrupt();
-        String s = reader.readLine();
-        Date c = new Date();
-        int sec = date.getSeconds() - c.getSeconds();
-        System.out.println(sec);
+        reader.close();
+        in.close();
+
+
 
 
 
