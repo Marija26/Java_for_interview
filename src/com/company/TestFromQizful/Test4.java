@@ -1,87 +1,73 @@
-//package com.company.TestFromQizful;
-//
-//
-//
-//
-////Created by Маша on 15.03.2017.
-//
-//
-////For s = "hello, world", the output should be
-////reverseVowelsOfString(s) = "hollo, werld";
-////For s = "codefights", the output should be
-////reverseVowelsOfString(s) = "cidefoghts";
-////For s = "eIaOyU", the output should be
-////reverseVowelsOfString(s) = "UOaIye".
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//public class Test4 {
-//    static char[] chars ={'a', 'e', 'i', 'o', 'u'};
-//
-//    public static void main(String[] args) {
-//
-//        String s = "Hello, world";
-//        sort(s);
-//
-//
-//    }
-//
-//
-//    static void sort(String s) {
-//        String vowels = " ";
-//        char[] chars1 = s.toCharArray();
-//
-//        for (int i = 0; i <chars1.length ; i++) {
-//            int count = 0;
-//            for (char c : chars1) {
-//                for (char aChar : chars) {
-//                    if(aChar == c) {
-//                        count++;}
-//
-//
-//
-//
-//
-//                }
-//
-//            }
-//
-//
-//
-//            }
-//
-//        }
-//
-//       /* for (int i = chars.length - 1; i >= 0; i--) {
-//            System.out.println(chars[i]);
-//            if (isVowel(chars[i])) {
-//                vowels = vowels + chars[i];
-//
-//
-//            }*/
-//
-//        }
-//    }
-//
-//
-//        public static boolean isVowel (char c){
-//            for (char aChar : chars) {
-//                if (aChar == c) {
-//                    return true;
-//                }
-//            }
-//            return false;
-//        }
-//    }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+package com.company.TestFromQizful;
+
+
+
+
+//Created by Маша on 15.03.2017.
+
+
+//For s = "hello, world", the output should be
+//reverseVowelsOfString(s) = "hollo, werld";
+//For s = "codefights", the output should be
+//reverseVowelsOfString(s) = "cidefoghts";
+//For s = "eIaOyU", the output should be
+//reverseVowelsOfString(s) = "UOaIye".
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test4 {
+
+
+    public static void main(String[] args) {
+
+        String s = "Hello, world";
+        String vowels = "aeiouAEIOU";
+        System.out.println(reverseVowels(s));
+
+
+    }
+
+
+    public static String reverseVowels(String string) {
+        String vowels = "aeiouAEIOU";
+
+        int lo = 0;
+        int hi = string.length() - 1;
+        char[] ch = string.toCharArray();
+
+        while (lo < hi) {
+            if (!vowels.contains(String.valueOf(string.charAt(lo)))) {
+                lo++;
+                continue;
+            }
+
+            if (!vowels.contains(String.valueOf(string.charAt(hi)))) {
+                hi--;
+                continue;
+
+            }
+
+            // swap
+            swap(ch, lo, hi);
+            lo++;
+            hi--;
+        }
+        return String.valueOf(ch);
+    }
+
+    private static void swap(char[] ch, int lo, int hi) {
+        char tmp = ch[lo];
+        ch[lo] = ch[hi];
+        ch[hi] = tmp;
+    }
+            }
+
+
+
+
+
+
+
+
+
