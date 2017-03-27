@@ -14,6 +14,8 @@ public class AmendTheSentence {
 
     }
 
+
+
     static String amendTheSentence(String s) {
         String result = " ";
         for (int i = 0; i < s.length(); i++) {
@@ -28,6 +30,7 @@ public class AmendTheSentence {
         }
         result = result.trim();
         return result;
+
 
     }
 //    StringBuilder builder = new StringBuilder();
