@@ -19,7 +19,7 @@ public class TestFromQ3 {
         public static void main(String[] args) {
             A1 a = new B1();
             OverloadTest.foo(a);
-            OverloadTest.foo((B1) a);
+            OverloadTest.foo((I1) a);
         }
 
     }
