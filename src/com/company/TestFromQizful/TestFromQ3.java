@@ -13,30 +13,40 @@ public class TestFromQ3 {
     public static void main(String[] args) {
         int[] a = {6, 7, 3, 8};
 
-        sort(a);
-//        for (int i : a) {
-//            System.out.println(i);
-//
-//        }
+
+        for (int i : sort(a)) {
+            System.out.println(i);
+
+        }
     }
 
 
+    static int[] sort(int[] a) {
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < a.length; i++) {
+            list.add(a[i]);
+        }
 
-
-
-
-    static void sort(int[] a) {
-        for (int i = 0; i <a.length-1 ; i++) {
-            System.out.println(a[i+1]);
-
-            }
-
+        for (int i = 0; i < list.size() - 1; i++) {
+            if (list.get(i + 1) < list.get(i)) {
+                int temp = list.get(i);
+                list.set(i, list.get(i + 1));
+                list.set(i + 1, temp);
 
             }
 
         }
+        int[] array = new int[list.size()];
+        for (int i = 0; i <list.size() ; i++) {
+            array[i] = list.get(i);
+
+        }
+        return array;
+
+    }
 
 
+}
 
 
 //    static void sort(int[] a) {
