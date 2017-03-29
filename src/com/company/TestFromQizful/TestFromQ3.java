@@ -29,7 +29,6 @@ public class TestFromQ3 {
 
         for (int i = 0; i < list.size() - 1; i++) {
             if (list.get(i + 1) > list.get(i)) {
-                list.set(i, list.get(i + 1));
                 for (int j = 0; j < list.size()-1; j++) {
                     if (list.get(j + 1) > list.get(j)) {
                         list.set(j, list.get(j + 1));
