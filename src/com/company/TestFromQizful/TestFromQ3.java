@@ -11,13 +11,14 @@ import java.util.*;
 public class TestFromQ3 {
 
     public static void main(String[] args) {
-        int[] a = {6, 7, 3, 8};
+        int[] a = {6, 7, 3, 8,9};
 
 
         for (int i : sort(a)) {
             System.out.println(i);
 
         }
+
     }
 
 
@@ -25,67 +26,50 @@ public class TestFromQ3 {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < a.length; i++) {
             list.add(a[i]);
+
+
         }
 
         for (int i = 0; i < list.size() - 1; i++) {
-            if (list.get(i + 1) > list.get(i)) {
-                for (int j = 0; j < list.size()-1; j++) {
-                    if (list.get(j + 1) > list.get(j)) {
-                        list.set(j, list.get(j + 1));
-                    }
+            if(list.get(i+1)>list.get(i)){
+            list.set(i, list.get(i + 1));}
+           if(list.get(i+1)<list.get(i)){
+                list.set(i, list.get(i + 2));
             }
 
         }
 
 
 
-        }
-        int[] array = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            array[i] = list.get(i);
-        }
-        return array;
-
-    }
-}
 
 
 
 
+                    int[] array = new int[list.size()];
+                    for (int i = 0; i < list.size(); i++) {
+                        array[i] = list.get(i);
+                    }
 
 
-//    static void sort(int[] a) {
-//        List<Integer> list = new ArrayList<>();
-//        for (int i = 0; i < a.length; i++) {
-//            list.add(a[i]);
-//
-//        }
-//      List<Integer> list2 = new ArrayList<>();
-//        int max = list.get(0);
-//
-//        ListIterator<Integer> listIterator = list.listIterator();
-//        while (listIterator.hasNext()) {
-//
-//
-//            for (int i = 0; i < list.size(); i++) {
-//                if (listIterator.nextIndex() > list.get(i)) {
-//                    max = listIterator.nextIndex();
-//
-//
-//
-//
-//                }
-//
-//
+
+                    return array;
+                }
+            }
+
+
+
+
+
+// static void printNextLarger(int a[]) {
+//        int max = a[a.length - 1];
+//        a[a.length - 1] = -1; //-1 here means none
+//        for (int i = a.length - 1; i > 0; i--) {
+//            if (a[i - 1] >= max) {
+//                max = a[i - 1];
+//                a[i - 1] = -1;
+//            } else {
+//                a[i - 1] = max;
 //            }
-//
-//
-//        }
-//        System.out.println(max);
-//
-//
-//
-//    }
 
 
 
