@@ -16,16 +16,35 @@ import java.util.*;
         findTheNumbers(a) = [3, 6]*/
 public class Test7 {
     public static void main(String[] args) {
+
         int[] a = {1, 3, 4, 5, 6, 1, 3, 6};
-        for (int i : findTheNumbers(a)) {
-            System.out.println(i);
 
+        int x = 0;
+        int y= 0;
+        for (int z = 0; z < 5; z++)
+        {
+            if (( ++x > 2 ) && (++y > 2))
+            {
+                x++;
+            }
         }
-
+        System.out.println(x + " " + y);
+        S
     }
+
+//        for (int i : findTheNumbers(a)) {
+//            System.out.println(i);
+
+
+
+
+
+
+
 
     static int[] findTheNumbers(int[] a) {
        Set<Integer> set = new HashSet<>();
+       Arrays.sort(a);
 
         for (Integer arrayElement : a) {
             if (!set.add(arrayElement)) {
