@@ -11,7 +11,7 @@ import java.util.*;
 public class TestFromQ3 {
 
     public static void main(String[] args) {
-        int[] a = {6, 7, 3, 8,9};
+        int[] a = {6, 7, 3, 4, 9};
 
 
         for (int i : sort(a)) {
@@ -30,34 +30,27 @@ public class TestFromQ3 {
 
         }
 
+
         for (int i = 0; i < list.size() - 1; i++) {
-            if(list.get(i+1)>list.get(i)){
-            list.set(i, list.get(i + 1));}
-           if(list.get(i+1)<list.get(i)){
-                list.set(i, list.get(i + 2));
+            if (list.get(i + 1) > list.get(i)) {
+                list.set(i, list.get(i + 1));
             }
+//           else if(list.get(i+1)<list.get(i)){
+//                list.set(i, list.get(i + 2));
+//            }
 
         }
 
 
+        int[] array = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            array[i] = list.get(i);
+        }
 
 
-
-
-
-                    int[] array = new int[list.size()];
-                    for (int i = 0; i < list.size(); i++) {
-                        array[i] = list.get(i);
-                    }
-
-
-
-                    return array;
-                }
-            }
-
-
-
+        return array;
+    }
+}
 
 
 // static void printNextLarger(int a[]) {
