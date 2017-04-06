@@ -16,57 +16,35 @@ import java.util.*;
         findTheNumbers(a) = [3, 6]*/
 public class Test7 {
     public static void main(String[] args) {
-
         int[] a = {1, 3, 4, 5, 6, 1, 3, 6};
-
-        int x = 0;
-        int y= 0;
-        for (int z = 0; z < 5; z++)
-        {
-            if (( ++x > 2 ) && (++y > 2))
-            {
-                x++;
-            }
+        for (int i : findTheNumbers(a)) {
+            System.out.println(i);
         }
-        System.out.println(x + " " + y);
-        S
     }
-
-//        for (int i : findTheNumbers(a)) {
-//            System.out.println(i);
-
-
-
-
-
-
 
 
     static int[] findTheNumbers(int[] a) {
-       Set<Integer> set = new HashSet<>();
-       Arrays.sort(a);
+        Set<Integer> set = new HashSet<>();
+        Arrays.sort(a);
 
         for (Integer arrayElement : a) {
-            if (!set.add(arrayElement)) {
+            if (set.contains(arrayElement)) {
                 set.remove(arrayElement);
-            }
-
+            } else set.add(arrayElement);
         }
-        List<Integer> list = new ArrayList<>(set);
-        for (int i = 0; i < list.size(); i++) {
-            Integer in = list.get(i);
 
-        }
-        int[] array = new int[list.size()];
-        for (int i = 0; i < set.size(); i++) {
-            array[i] = list.get(i);
+        int[] arrRes = {(int) set.toArray()[0], (int) set.toArray()[1]};
+        return arrRes;
+//        int[] b = new int[set.size()];
+//        int i = 0;
+//        for (Integer integer : set) {
+//            b[i] = integer;
+//            i++;
+//        }
 
 
-
-
-        }
-        return array;
     }
+}
 
 //
 
@@ -91,8 +69,8 @@ public class Test7 {
 //        int[] array = new int[set.size()];
 //        for (int i = 0; i < set.size(); i++) {
 //            array[i] = set.get(i);
-        }
-        //return array;
+
+//return array;
 
 
 
