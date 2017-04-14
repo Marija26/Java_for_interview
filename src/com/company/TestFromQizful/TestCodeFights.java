@@ -24,29 +24,39 @@ Given the same input string and k = 3, split the string into groups of 2, 3,
 and 3 characters to get the output string of "24-a0r-74k".*/
 public class TestCodeFights {
     public static void main(String[] args) {
-        String s = "24a0r74k";
-        int k = 4;
-        stringReformatting(s, k);
+        String s = "2-4a0r-74k";
+        int k = 3;
+       stringReformatting(s, k);
     }
 
     static void stringReformatting(String s, int k) {
-        for (Object o : s.split("", s.)) {
-            System.out.print(o+"-");
 
-        }
+//        List<String> result = new ArrayList<String>((s.length() + k - 1) / k);
+//        for (int i = 0; i <s.length() ; i+=k) {
+//            result.add(s.substring(i, Math.min( s.length(), i + k)));
+//        }
+//
+//        System.out.println(result);
 
-        while(s.length() > k) {
-           s= s.substring(0, k);
-           s= s.substring(0, k);
 
-        }
+
+//        for (Object o : s.split("", s.)) {
+//            System.out.print(o+"-");
+//
+//        }
+//
+//        while(s.length() > k) {
+//           s= s.substring(0, k);
+//           s= s.substring(0, k);
+//
+//        }
 //        System.out.print(s + "-");
 
 
 
-//        for (Object o : s.split(("(?<=\\G.{4})"))){
-//            System.out.print(o + "-");
-//        }
+        for (Object o : s.split(("(?<=\\G.{4})"))){
+            System.out.print(o);
+        }
 
 
 
