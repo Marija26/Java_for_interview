@@ -13,6 +13,6 @@ public class Client {
     }
 
     void execute() {
-        productB.interact((AbstractProductB) productA);
+        productB.interact(productB);
     }
 }
