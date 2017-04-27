@@ -22,48 +22,28 @@ stringReformatting(s, k) = "24-a0r-74k".
 
 Given the same input string and k = 3, split the string into groups of 2, 3,
 and 3 characters to get the output string of "24-a0r-74k".*/
-public class TestCodeFights {
-    public static void main(String[] args) {
-        String s = "2-4a0r-74k";
-        int k = 3;
-       stringReformatting(s, k);
-    }
-
-    static void stringReformatting(String s, int k) {
-
-//        List<String> result = new ArrayList<String>((s.length() + k - 1) / k);
-//        for (int i = 0; i <s.length() ; i+=k) {
-//            result.add(s.substring(i, Math.min( s.length(), i + k)));
-//        }
+public class TestCodeFights {}
+//    public static void main(String[] args) {
+//        String s = "2-4a0r7-4k";
+//        int k = 3;
+//        System.out.println(stringReformatting(s, k));
+//    }
 //
-//        System.out.println(result);
-
-
-
-//        for (Object o : s.split("", s.)) {
-//            System.out.print(o+"-");
+//    static String stringReformatting(String s, int k) {
+//        StringBuilder stringBuilder = new StringBuilder();
+//        int j = 0;
+//        for (int i = s.length()-1; i >0 ; i++) {
+//            if()
 //
 //        }
 //
-//        while(s.length() > k) {
-//           s= s.substring(0, k);
-//           s= s.substring(0, k);
+////
+////        String r = s.replace("-", "");
+////        return (r.substring(0, r.length() % k) + r.substring(r.length() % k).replaceAll(String.format("(.{%d})", k), "-$1")).replaceAll("^-", "");
+//    }
 //
-//        }
-//        System.out.print(s + "-");
-
-
-
-        for (Object o : s.split(("(?<=\\G.{4})"))){
-            System.out.print(o);
-        }
-
-
-
-        }
-
-
-    }
+//
+//}
 
 
 

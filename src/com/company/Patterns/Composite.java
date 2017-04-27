@@ -11,55 +11,56 @@ public class Composite {
         Circle circle = new Circle();
         Square square = new Square();
         Triangle triangle = new Triangle();
-     Composite_ c = new Composite_();
-     Composite_ c1 = new Composite_();
-     Composite_ c2 = new Composite_();
+        Composite_ c = new Composite_();
+        Composite_ c1 = new Composite_();
+        Composite_ c2 = new Composite_();
 
-     c1.addComposite(circle);
-     c1.addComposite(triangle);
-     c2.addComposite(square);
+        c1.addComposite(circle);
+        c1.addComposite(triangle);
+        c2.addComposite(square);
 
-     c.addComposite(c1);
-     c.addComposite(c2);
+        c.addComposite(c1);
+        c.addComposite(c2);
         c.removeComponents(c2);
-     c.draw();
-
-
+        c.draw();
     }
-
 }
 
 
-
-interface Shape{
+interface Shape {
     void draw();
 }
-class Square implements Shape{
+
+class Square implements Shape {
 
     @Override
     public void draw() {
         System.out.println("Im a square");
     }
 }
-class Triangle implements Shape{
+
+class Triangle implements Shape {
     @Override
     public void draw() {
         System.out.println("Ima triangle");
     }
 }
-class Circle implements Shape{
+
+class Circle implements Shape {
     @Override
     public void draw() {
         System.out.println("Im a circle");
     }
 }
-class  Composite_ implements Shape{
+
+class Composite_ implements Shape {
     private List<Shape> components = new ArrayList<>();
 
-    void addComposite(Shape component){
+    void addComposite(Shape component) {
         components.add(component);
     }
-    public void removeComponents(Shape component){
+
+    public void removeComponents(Shape component) {
         components.remove(component);
     }
 
@@ -67,7 +68,7 @@ class  Composite_ implements Shape{
     public void draw() {
         for (Shape component : components) {
             component.draw();
-            
+
         }
 
     }
