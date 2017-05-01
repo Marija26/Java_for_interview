@@ -23,6 +23,7 @@ public class TryCatch {
 
     }
 
+
     public static void readData() throws IOException {
         BufferedReader reader = new BufferedReader (new InputStreamReader (System.in));
         List<Integer> list = new ArrayList<> ();

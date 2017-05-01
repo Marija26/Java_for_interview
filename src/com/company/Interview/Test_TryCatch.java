@@ -7,10 +7,7 @@ import java.io.FileInputStream;
  */
 public class Test_TryCatch {
 
-    class A еxtends B {};
-    class B еxtends C {};
-    class C еxtends D {};
-}
+
 
     public static void main(String[] args) {
         System.out.println(method());

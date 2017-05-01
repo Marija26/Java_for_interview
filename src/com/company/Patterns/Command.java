@@ -6,10 +6,7 @@ package com.company.Patterns;
 public class Command {
     public static void main(String[] args) {
         Comp c = new Comp();
-        User u = new User(new StartCommand(c),new StopCommand(c), new ResetCommand(c));
-        u.startComputer();
-        u.stopComputer();
-        u.resetComputer();
+        Usser u = new Usser(new StartCommand(c),new StopCommand(c), new ResetCommand(c));
 
     }
 }
@@ -63,11 +60,11 @@ class ResetCommand implements Command_ {
     }
 }
 
-class User{
+class Usser{
     Command_ start;
     Command_ stop;
     Command_ reset;
-    public User(Command_ start, Command_ stop, Command_ reset){
+    public Usser(Command_ start, Command_ stop, Command_ reset){
         this.start = start;
         this.stop = stop;
         this.reset = reset;

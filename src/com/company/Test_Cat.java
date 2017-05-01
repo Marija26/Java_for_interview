@@ -5,6 +5,7 @@ package com.company;
  * [8](List -> el3) [12](List -> el1.equals(el4)) [16](List -> el2) /// 16 O(1) O(n)
  */
 public class Test_Cat {
+
     String name;
     int age;
 
