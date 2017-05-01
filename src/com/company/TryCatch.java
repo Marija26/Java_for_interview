@@ -22,6 +22,20 @@ public class TryCatch {
         readData ();
 
     }
+    abstract class A {
+     int a = 8;
+     public A() { show(); }
+     abstract void show();
+ }
+
+         class B extends A {
+     int a = 90;
+     void show() { System.out.println("" + a); }
+
+             public static void main(String args[]) {
+                     new B();
+                 }
+ }
 
 
     public static void readData() throws IOException {
