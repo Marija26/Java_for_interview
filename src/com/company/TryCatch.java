@@ -32,9 +32,7 @@ public class TryCatch {
      int a = 90;
      void show() { System.out.println("" + a); }
 
-             public static void main(String args[]) {
-                     new B();
-                 }
+
  }
 
 
