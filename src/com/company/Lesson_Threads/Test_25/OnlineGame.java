@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class OnlineGame extends Thread {
     static List<String> steps = new ArrayList<>();
-   boolean isWinnerFound = false;
+    public static volatile boolean isWinnerFound = false;
     static {
         steps.add("Начало игры");
         steps.add("Сбор ресурсов");
