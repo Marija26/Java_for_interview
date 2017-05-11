@@ -18,12 +18,11 @@ public class ReaderThread extends Thread {
 
 
     }
-    Thread thread = currentThread();
 
     @Override
     public String toString() {
-       return result.toString();
-
+        String s = result.toString();
+        return s.substring(1, s.length()-1);
     }
 
     @Override
@@ -35,6 +34,7 @@ public class ReaderThread extends Thread {
                 String s = reader.readLine();
                 result.add(s);
                 MyThread.countReadStrings++;
+
             } catch (IOException e) {
                 e.printStackTrace();
             }

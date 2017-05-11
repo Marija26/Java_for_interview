@@ -29,26 +29,34 @@ public class MyThread {
     static  byte countReadStrings;
     public static void main(String[] args) throws IOException {
         int count = Integer.parseInt(reader.readLine());
+
+
         for (int i = 0; i <count ; i++) {
-            ReaderThread.result.size();
+            ReaderThread.result.add(reader.readLine());
 
         }
-        List <ReaderThread> threads = new ArrayList<>();
-
         ReaderThread readerThread = new ReaderThread("ert");
         ReaderThread readerThread1 = new ReaderThread("tyu");
         ReaderThread readerThread2 = new ReaderThread("vbn");
-        threads.add(readerThread);
-        threads.add(readerThread1);
-        threads.add(readerThread2);
 
 
-            if(count <= countReadStrings){
-                return;
+            while (count <= countReadStrings){
+
             }
+            readerThread.interrupt();
+            readerThread1.interrupt();
+            readerThread2.interrupt();
 
-        System.out.println("#1:" + readerThread);
+         System.out.println("#1:" + readerThread);
+         System.out.println("#2:" + readerThread1);
+         System.out.println("#3:" + readerThread2);
+
+
+        }
+
+
+
 
 
     }
-}
+
