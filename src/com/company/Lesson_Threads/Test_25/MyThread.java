@@ -1,7 +1,8 @@
 package com.company.Lesson_Threads.Test_25;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.company.OOP.DeBug;
+
+import java.util.*;
 
 /**
  * Created by Маша on 09.05.2017.
@@ -34,17 +35,10 @@ import java.util.List;
 */
 public class MyThread {
     public static void main(String[] args) throws InterruptedException {
-        Thread.sleep(1000);
-        OnlineGame onlineGame =new OnlineGame();
-        Gamer gamer1 = new Gamer("Den", 2);
-
-
-        Gamer gamer2 = new Gamer("Qwer", 1);
-
-
-        Gamer gamer3 = new Gamer("Zak", 2);
+        OnlineGame onlineGame = new OnlineGame();
         onlineGame.start();
-
-        }
     }
+}
+
+
 

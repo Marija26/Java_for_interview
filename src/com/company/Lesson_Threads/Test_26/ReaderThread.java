@@ -10,34 +10,33 @@ import java.util.List;
  * Created by Маша on 10.05.2017.
  */
 public class ReaderThread extends Thread {
-    static List<String> result =new ArrayList<>();
+    List<String> result = new ArrayList<>();
 
-    public ReaderThread(String name){
+
+    public ReaderThread(String name) {
         super(name);
         start();
-
-
     }
 
     @Override
     public String toString() {
+
         String s = result.toString();
-        return s.substring(1, s.length()-1);
+        return s.substring(1, s.length() - 1);
     }
 
     @Override
     public void run() {
-
-        while (!isInterrupted()){
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            try {
-                String s = reader.readLine();
+        try {
+            while (!isInterrupted()) {
+                Thread.sleep(10);
+                String s = MyThread.reader.readLine();
                 result.add(s);
                 MyThread.countReadStrings++;
-
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+
+        } catch (IOException | InterruptedException e) {
         }
     }
 }
+

@@ -25,38 +25,31 @@ import java.util.List;
 4.3 Вывести значение каждой нити на экран в виде: "#1:" + нить
 */
 public class MyThread {
-    static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    static  byte countReadStrings;
+    static volatile BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    static volatile byte countReadStrings;
+
     public static void main(String[] args) throws IOException {
         int count = Integer.parseInt(reader.readLine());
 
+        ReaderThread readerThread = new ReaderThread("John");
+        ReaderThread readerThread1 = new ReaderThread("Danny");
+        ReaderThread readerThread2 = new ReaderThread("Tom");
 
-        for (int i = 0; i <count ; i++) {
-            ReaderThread.result.add(reader.readLine());
-
-        }
-        ReaderThread readerThread = new ReaderThread("ert");
-        ReaderThread readerThread1 = new ReaderThread("tyu");
-        ReaderThread readerThread2 = new ReaderThread("vbn");
-
-
-            while (count <= countReadStrings){
-
-            }
-            readerThread.interrupt();
-            readerThread1.interrupt();
-            readerThread2.interrupt();
-
-         System.out.println("#1:" + readerThread);
-         System.out.println("#2:" + readerThread1);
-         System.out.println("#3:" + readerThread2);
-
+        while (count > countReadStrings) {
 
         }
 
+        readerThread.interrupt();
+        readerThread1.interrupt();
+        readerThread2.interrupt();
 
-
-
+        System.out.println("#1:" + readerThread);
+        System.out.println("#2:" + readerThread1);
+        System.out.println("#3:" + readerThread2);
+        reader.close();
 
     }
+
+
+}
 
