@@ -18,19 +18,19 @@ public class TreeMap1 {
         map.put("qwem", "ytwer");
         map.put("qwen", "ytwer");
 
-        Map<String, String> map1 = new TreeMap<>(new Comparator<String>() {
+        Map<String, String> map1 = new TreeMap(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                int res = map.get(o2).length() - map.get(o1).length();
-                return (res == 0) ? -1 : res;
+               int result = map.get(o2).length() - map.get(o1).length();
+               return result == 0? -1: result;
             }
         });
         map1.putAll(map);
         for (Map.Entry<String, String> entry : map1.entrySet()) {
-            System.out.println(entry.getKey()+ entry.getValue());
+            System.out.println(entry.getKey() + entry.getValue());
+        }
 
         }
-    }
 }
 
 

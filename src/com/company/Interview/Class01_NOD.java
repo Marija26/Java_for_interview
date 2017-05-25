@@ -11,6 +11,15 @@ import java.io.InputStreamReader;
 Наибольший общий делитель (НОД).
 Ввести с клавиатуры 2 целых положительных числа.
 Вывести в консоль наибольший общий делитель.
+
+[0](List Entry1) [](List) [7](List Entry3) [8](List Entry4, Entry5) [9](List Entry2)..// 16
+
+null - 100
+10 - 100
+5 - 50
+20 - 200
+50 - 500
+10 - 200
 */
 public class Class01_NOD {
     public static void main(String[] args) throws IOException {

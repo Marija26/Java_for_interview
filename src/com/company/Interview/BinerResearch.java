@@ -6,7 +6,7 @@ package com.company.Interview;
 public class BinerResearch {
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 78, 400, 500, 567, 890, 1000, 1234};
-        System.out.println(binarySearch(890, arr));
+        System.out.println(binarySearch(7, arr));
     }
 
     public static int binarySearch(int value, int[] arr){
