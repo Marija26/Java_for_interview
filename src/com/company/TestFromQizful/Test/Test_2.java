@@ -30,16 +30,24 @@ public class Test_2 {
 //        list.add(7);
       int[] array = {3,   2,   7,   4,   8};
         int k = 3;
-        sort(array, k);
+        int q =0;
+        for (int i = 0; i <array.length ; i++) {
+            q =array[k-1];
+        }
+        System.out.println(q);
+        System.out.println(sort(array, k));
 
     }
 
-    public static void sort(int[]a, int k) {
+    public static int sort(int[]a, int k) {
         Arrays.sort(a);
+        int res = 0;
             for (int i= 0; i < a.length; i++) {
-                System.out.println(a[k-1]);
+               res = a[k-1];
 
             }
+            k = res;
+            return k;
         }
     }
 
