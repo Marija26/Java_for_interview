@@ -18,4 +18,7 @@ public class CyclaFor {
         }
 
     }
+   public void met(){
+
+    }
 }
