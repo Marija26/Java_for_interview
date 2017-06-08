@@ -1,6 +1,6 @@
 package com.company.Javarush;
 
-import com.company.Tests.TestMapCat;
+
 import javafx.scene.effect.SepiaTone;
 
 import java.util.*;

@@ -9,6 +9,13 @@ import java.util.List;
  */
 public class Ckass04 {
     public static void main(String[] args) {
+        boolean b = false;
+        if (b == false)
+            if (b = false)
+                System.out.println("if statement");
+            else
+                System.out.println("else statement");
+
         List<Integer>list = new ArrayList<>();
         list.add(5);
         list.add(7);
@@ -20,5 +27,7 @@ public class Ckass04 {
             Integer a = iterator.next();
             System.out.println(a);
         }
+
+
     }
 }

@@ -1,7 +1,7 @@
 package com.company.Lesson_Threads.Task_04;
 
 import com.company.Lesson_Threads.Task_03.Thread;
-import com.company.Tests.StackTrace;
+
 
 /**
  * Created by Маша on 09.02.2017.
